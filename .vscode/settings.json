@@ -3,5 +3,29 @@
         "bootcamp"
     ],
     "python.testing.unittestEnabled": false,
-    "python.testing.pytestEnabled": true
+    "python.testing.pytestEnabled": true,
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "bootcamp postgres",
+            "group": "bootcamp ",
+            "database": "postgres",
+            "username": "postgres",
+            "password": "postgres"
+        },
+        {
+            "hiveCLIServiceProtocolVersion": "V11",
+            "previewLimit": 50,
+            "driver": "Hive",
+            "name": "bootcamp_spark",
+            "group": "bootcamp",
+            "host": "localhost",
+            "port": 10000,
+            "username": "hive",
+            "password": "hive"
+        }
+    ]
 }
