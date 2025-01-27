@@ -1,0 +1,5 @@
+- Answer these questions
+  - What is the average number of web events of a session from a user on Tech Creator? 
+    - Answer 2.75 web events
+  - Compare results between different hosts (zachwilson.techcreator.io, zachwilson.tech, lulu.techcreator.io)
+    - Answer: bootcamp.techcreator.io has 24 total sessions with 2.54 web events while www.dataexpert.io has 56 total sessions with 1.80 web events

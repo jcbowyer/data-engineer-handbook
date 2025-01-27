@@ -1,4 +1,5 @@
-INSERT INTO players
+/* DELETE FROM Players;
+INSERT INTO players */
 WITH years AS (
     SELECT *
     FROM GENERATE_SERIES(1996, 2022) AS season
@@ -23,10 +24,10 @@ WITH years AS (
                     WHEN ps.season IS NOT NULL
                         THEN ROW(
                             ps.season,
-                            ps.gp,
                             ps.pts,
+                            ps.ast,
                             ps.reb,
-                            ps.ast
+                            ps.gp
                         )::season_stats
                 END)
             OVER (PARTITION BY pas.player_name ORDER BY COALESCE(pas.season, ps.season)),
@@ -69,4 +70,5 @@ SELECT
     (seasons[CARDINALITY(seasons)]::season_stats).season = season AS is_active
 FROM windowed w
 JOIN static s
-    ON w.player_name = s.player_name;
+    ON w.player_name = s.player_name
+where s.player_name = 'Aaron Brooks';
